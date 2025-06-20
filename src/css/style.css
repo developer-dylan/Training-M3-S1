@@ -43,7 +43,10 @@ main {
 
 /* Formulario */
 .container {
+  background-color: white;
   padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
 }
@@ -51,7 +54,6 @@ main {
 .welcome {
   margin: 0 0 1rem;
   font-family: "Raleway", sans-serif;
-  font-size: 27px;
   font-weight: 700;
   line-height: 1.2;
   text-align: center !important;
@@ -134,16 +136,25 @@ footer {
     padding: 1rem;
   }
 
+  .welcome {
+    font-size: 25px;
+  }
+
   .container {
     padding: 1.5rem;
     box-shadow: none;
     border-radius: 10px;
   }
+  
 }
 
 /* 2. Tabletas (481px – 768px) */
-@media (max-width: 768px) {
-  
+@media (min-width: 768px) {
+ 
+  .container {
+    padding: 2rem;
+  }
+
   header {
    max-width: 768px;
   }
@@ -153,14 +164,11 @@ footer {
     max-width: 100%;
   }
 
-  .container {
-    padding: 2rem;
-  }
-
   .welcome {
     font-size: 85px;
   }
 
+  
 }
 
 /* 3. Laptops (769px – 1024px) */
@@ -173,13 +181,13 @@ footer {
     max-width: 600px;
   }
 
-  .welcome {
-    font-size: 85px;
-  }
-
   .logo {
     width: 100%;
     max-width: 410px;
+  }
+
+  .welcome {
+    font-size: 85px;
   }
 }
 
@@ -199,6 +207,8 @@ footer {
     height: auto;
     padding-left: 1rem;
   }
+  
+
 
   main {
     justify-content: center;
