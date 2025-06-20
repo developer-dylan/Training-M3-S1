@@ -7,12 +7,17 @@
 
 /* Fuente y fondo general */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #f0f8ff, #dbeafe);
-  color: #333;
+  color: #373737;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 0 1px transparent;
+  word-break: break-word;
 }
 
 /* Header */
@@ -45,41 +50,57 @@ main {
 .container {
   background-color: white;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .welcome {
   margin: 0 0 1rem;
   font-family: "Raleway", sans-serif;
+  font-size: 27px;
+  color: #373737;
   font-weight: 700;
   line-height: 1.2;
   text-align: center !important;
 }
-/* Inputs */
+
+.formulario {
+  padding-top: 1rem;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  font-weight: bold;
+  color: #373737;
+}
+
 label {
   display: block;
-  margin-top: 1rem;
-  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #373737;
+  padding-top: 1rem ;
 }
 
 input[type="text"],
 input[type="number"] {
-  width: 100%;
-  padding: 0.7rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
+    transition: border-color 200ms ease, outline 200ms ease;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 0;
+    background-color: #fff;
+    color: #373737;
+    font-size: 1rem;
+    line-height: normal;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 5px #93c5fd;
+  border-color: #79a9f7;
+  box-shadow: 0 0 5px #52abe9;
 }
 
 /* Botón */
@@ -87,11 +108,10 @@ button {
   margin-top: 1.5rem;
   width: 100%;
   padding: 0.8rem;
-  background-color: #3b82f6;
+  background-color: #81bae9;
   color: white;
   font-size: 1rem;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -109,7 +129,7 @@ button:hover {
 
 .limpiar {
   margin-top: 1rem;
-   font-weight: bold;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -121,6 +141,7 @@ footer {
   border-top: 1px solid rgba(55, 55, 55, 0.1);
   background-color: #00151f;
   color: #fff;
+  justify-content: center;
   text-align: center;
 }
 
@@ -152,11 +173,13 @@ footer {
 @media (min-width: 768px) {
  
   .container {
-    padding: 2rem;
+    padding: 1.5 rem;
+    box-shadow: none;
+    border-radius: 10px;
   }
 
   header {
-   max-width: 768px;
+   max-width: 1022px;
   }
 
   .logo {
@@ -174,7 +197,7 @@ footer {
 /* 3. Laptops (769px – 1024px) */
 @media (min-width: 992px) {
   header {
-    max-width: 992px;
+    max-width: 1022px;
   }
 
   .container {
@@ -198,7 +221,7 @@ footer {
   }
 
   header {
-    max-width: 1025px;
+    max-width: 1920px;
   }
 
   .logo {
@@ -208,10 +231,10 @@ footer {
     padding-left: 1rem;
   }
   
-
-
-  main {
-    justify-content: center;
+  .welcome {
+    font-size: 85px;
   }
+
+
 }
 

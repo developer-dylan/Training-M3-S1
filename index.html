@@ -26,20 +26,25 @@
     </header>
 
     <main>
+
+        <div class="container">
+
             <h2 class="welcome">
                 ¡Te damos la Bienvenida!
             </h2>
-        <div class="container">
-            
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="name" placeholder="Ingresa tu Nombre">
 
-            <label for="Age">Edad:</label>
-            <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
+            <div class="formulario">
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="name" placeholder="Ingresa tu Nombre">
 
-            <button onclick="enviar()">Enviar</button>
-            <button onclick="limpiar()" style="display: none;">Limpiar</button>
+                <label for="Age">Edad:</label>
+                <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
 
+                <button onclick="enviar()">Enviar</button>
+                <button onclick="limpiar()" style="display: none;">Limpiar</button>
+
+            </div>
 
             <div class="enviar" id="enviar"></div>
             <div class="limpiar" id="limpiar"> </div>
