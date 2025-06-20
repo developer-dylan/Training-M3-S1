@@ -22,23 +22,32 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Hola Mundo!</h1>
     </header>
 
     <main>
-        <div class=""></div>
+
+        <div class="container">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="name" placeholder="Ingresa tu Nombre">
+
+            <label for="Age">Edad:</label>
+            <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
+
+            <button onclick="enviar()">Enviar</button>
+
+            <div class="enviar" id="enviar"></div>
+        </div>
     </main>
 
     <footer>
-
+        <div class="footer-content">
+            <p>© 2025 developer-dylan. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
