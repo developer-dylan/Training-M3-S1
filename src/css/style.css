@@ -17,8 +17,13 @@ body {
 
 /* Header */
 header {
-  background-color: #1d4ed8;
-  padding: 1rem;
+    background-color: #00151f;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding: 1rem
 }
 
 
@@ -31,11 +36,10 @@ main {
   align-items: center;
 }
 
-h1 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
+.logo {
+  max-height: none;
+  width: 12rem;
+  height: auto;
 }
 
 /* Formulario */
@@ -97,21 +101,33 @@ button:hover {
   text-align: center;
 }
 
+.limpiar {
+  margin-top: 1rem;
+   font-weight: bold;
+  text-align: center;
+}
+
 /* Footer */
 footer {
-  background-color: #1d4ed8;
-  color: white;
+  margin-top: auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid rgba(55, 55, 55, 0.1);
+  background-color: #00151f;
+  color: #fff;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
 }
 
 /* ========== MEDIA QUERIES ========== */
 
 /* 1. Celulares pequeños (hasta 480px) */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
+
+  header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
   }
 
   .container {
@@ -119,41 +135,38 @@ footer {
     box-shadow: none;
     border-radius: 10px;
   }
-
-  header nav ul {
-    flex-direction: row;
-    gap: 1rem;
-  }
 }
 
 /* 2. Tabletas (481px – 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
+@media (max-width: 768px) {
+ 
   .container {
     padding: 2rem;
   }
 
-  header nav ul {
-    flex-direction: row;
-    justify-content: space-around;
+  header {
+   max-width: 768px;
+  }
+
+  .logo {
+    display: block;
+    max-width: 100%;
   }
 }
 
 /* 3. Laptops (769px – 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  h1 {
-    font-size: 2.3rem;
+@media (min-width: 992px) {
+  header {
+    max-width: 992px;
   }
 
   .container {
     max-width: 600px;
   }
 
-  header nav ul {
-    gap: 2rem;
+  .logo {
+    width: 100%;
+    max-width: 410px;
   }
 }
 
@@ -163,8 +176,19 @@ footer {
     max-width: 700px;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  header {
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    max-height: none;
+    width: 12rem;
+    height: auto;
+  }
+
+  main {
+    justify-content: center;
   }
 }
 

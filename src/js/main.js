@@ -1,42 +1,57 @@
 function enviar() {
-    // Obtener los elementos del DOM
     const nombre = document.getElementById("name").value.trim();
     const age = document.getElementById("age").value.trim();
-    const enviar = document.getElementById("enviar");
+    const resultado = document.getElementById("enviar");
+    const btnEnviar = document.querySelector("button[onclick='enviar()']");
+    const btnLimpiar = document.querySelector("button[onclick='limpiar()']");
 
-    enviar.className = "enviar"; // Reiniciar clase
-    let message = ""; // Mensaje a mostrar
+    resultado.textContent = "";
+    resultado.style.color = "red";
 
     // Validación de campos vacíos
     if (nombre === "" || age === "") {
-        alert("Por favor, completa todos los campos.");
+        resultado.textContent = "Por favor, completa todos los campos.";
         return;
     }
 
-    // Verificar si la edad es un número válido
     const edad = Number(age);
+
+    // Validación no numérica
     if (isNaN(edad) || age.match(/[a-zA-Z]/)) {
         console.error("Error: Por favor, ingresa una edad válida en números.");
-        enviar.textContent = "Error: Por favor, ingresa una edad válida en números.";
-        enviar.style.color = "red";
+        resultado.textContent = "Error: Por favor, ingresa una edad válida en números.";
         return;
     }
 
     // Validación de rango
     if (edad < 0 || edad > 120) {
-        enviar.textContent = "La edad debe estar entre 0 y 120 años.";
-        enviar.style.color = "red";
+        resultado.textContent = "La edad debe estar entre 0 y 120 años.";
         return;
     }
 
     // Mensaje según edad
     if (edad < 18) {
-        message = `Hola ${nombre}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
+        resultado.textContent = `Hola ${nombre}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
     } else {
-        message = `Hola ${nombre}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
+        resultado.textContent = `Hola ${nombre}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
     }
 
-    // Mostrar mensaje final
-    enviar.textContent = message;
-    enviar.style.color = "green";
+    resultado.style.color = "green";
+
+    // Cambiar botones
+    btnEnviar.style.display = "none";
+    btnLimpiar.style.display = "inline-block";
+}
+
+function limpiar() {
+    // Limpiar campos
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("enviar").textContent = "";
+
+    // Restaurar visibilidad de botones
+    const btnEnviar = document.querySelector("button[onclick='enviar()']");
+    const btnLimpiar = document.querySelector("button[onclick='limpiar()']");
+    btnEnviar.style.display = "inline-block";
+    btnLimpiar.style.display = "none";
 }

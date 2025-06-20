@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <h1>Hola Mundo!</h1>
+        <img class="logo" src="./src/img/logo-hola-mundo-horizontal.webp" alt="Esta imagen es el logo de la aplicación">
     </header>
 
     <main>
@@ -35,9 +35,12 @@
             <label for="Age">Edad:</label>
             <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
 
-            <button onclick="enviar()">Enviar</button>
+           <button onclick="enviar()">Enviar</button>
+           <button onclick="limpiar()" style="display: none;">Limpiar</button>
+
 
             <div class="enviar" id="enviar"></div>
+            <div class="limpiar" id="limpiar"> </div>
         </div>
     </main>
 
