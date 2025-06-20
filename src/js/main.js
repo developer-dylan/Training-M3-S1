@@ -1,11 +1,11 @@
 function enviar() {
     // Obtener los elementos del DOM
-    const nombre = document.getElementById("name").value.trim;
-    const age = document.getElementById("age").value.trim;
+    const nombre = document.getElementById("name").value.trim();
+    const age = document.getElementById("age").value.trim();
     const enviar = document.getElementById("enviar");
 
-    enviar.className = "enviar"; // Reiniciar clase del botón
-    let message = ""; // Variable para almacenar el mensaje
+    enviar.className = "enviar"; // Reiniciar clase
+    let message = ""; // Mensaje a mostrar
 
     // Validación de campos vacíos
     if (nombre === "" || age === "") {
@@ -13,21 +13,30 @@ function enviar() {
         return;
     }
 
-    // Convertir a número
+    // Verificar si la edad es un número válido
     const edad = Number(age);
+    if (isNaN(edad) || age.match(/[a-zA-Z]/)) {
+        console.error("Error: Por favor, ingresa una edad válida en números.");
+        enviar.textContent = "Error: Por favor, ingresa una edad válida en números.";
+        enviar.style.color = "red";
+        return;
+    }
 
-    // Validación de tipo numérico y rango
-     if (isNaN(edad)) {
-        alert("Por favor, ingresa una edad válida.");
+    // Validación de rango
+    if (edad < 0 || edad > 120) {
+        enviar.textContent = "La edad debe estar entre 0 y 120 años.";
+        enviar.style.color = "red";
         return;
-    } else if (edad < 0 || edad > 120) {
-        alert("La edad debe estar entre 0 y 120 años.");
-        return;
-    } else if (edad < 18) {
+    }
+
+    // Mensaje según edad
+    if (edad < 18) {
         message = `Hola ${nombre}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
-    } else if (edad >= 18) {
+    } else {
         message = `Hola ${nombre}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
     }
 
+    // Mostrar mensaje final
     enviar.textContent = message;
+    enviar.style.color = "green";
 }
