@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic page setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO and info -->
+  <meta name="description" content="Esta aplicación web, desarrollada con HTML, CSS y JavaScript, permite validar el nombre y la edad del usuario de forma interactiva.">
+  <meta name="keywords" content="formulario, edad, validación, JavaScript, HTML, developer-dylan">
+  <meta name="sitedomain" content="https://github.com/developer-dylan/Training-M3-S1.git">
+  <meta name="organization" content="developer-dylan">
+  <meta name="author" content="Dylan Andrés Marín">
+  <meta name="designer" content="Dylan Andrés Marín">
+  <meta name="copyright" content="© 2025 developer-dylan. All rights reserved">
+
+  <!-- Design and icon -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="./src/icons/favicon.webp" type="image/x-icon">
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <title>Hola Mundo!</title>
+</head>
+
+<body>
+  <!-- Header with logo and static menu icon -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img class="logo" src="./src/img/logo-hola-mundo-horizontal.webp" alt="Esta imagen es el logo de la aplicación">
+    </div>
+    <div class="menu-icon">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-label">Menú</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2 class="welcome"> ¡Te damos la Bienvenida! </h2>
+
+      <!-- Form: user inputs name and age -->
+      <div class="form-login">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="name" placeholder="Ingresa tu Nombre">
+
+        <label for="Age">Edad:</label>
+        <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
+
+        <!-- Buttons: show only "Enviar" first -->
+        <button onclick="send()">Enviar</button>
+        <button onclick="clean()" style="display: none;">Limpiar</button>
+      </div>
+
+      <!-- Message output after form -->
+      <div class="send" id="send"></div>
+      <div class="clean" id="clean"></div>
+
+      <!-- Social media icons -->
+      <div class="social-login">
+        <p>-----    O inicie sesión con    ------</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 developer-dylan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for form logic -->
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

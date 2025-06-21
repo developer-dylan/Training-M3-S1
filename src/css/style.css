@@ -1,0 +1,300 @@
+/* Reset all margins, paddings and use border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+  color: #373737;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 0 1px transparent;
+}
+
+/* Header styles */
+header {
+  background-color: #00151f;
+  width: 100%;
+  padding: 1rem; /* all sides */
+}
+
+/* Top navigation bar */
+.navbar {
+  background-color: #00151f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-label {
+  font-size: 0.75rem;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  max-height: none;
+  width: 12rem;
+  height: auto;
+}
+
+/* Form container */
+.container {
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Welcome title */
+.welcome {
+  margin: 0 0 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 27px;
+  color: #373737;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center !important;
+}
+
+/* Form style */
+.form-login {
+  padding-top: 1rem;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #373737;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #373737;
+  padding-top: 1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  transition: border-color 200ms ease, outline 200ms ease;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #d9d9d9;
+  border-radius: 0;
+  background-color: #fff;
+  color: #373737;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #79a9f7;
+  box-shadow: 0 0 5px #52abe9;
+}
+
+/* Button style */
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #81bae9;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Message style */
+.send, .clean {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid rgba(55, 55, 55, 0.1);
+  background-color: #00151f;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Social media login icons */
+.social-login {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-login p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 50%;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #ddd;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Small phones */
+@media (max-width: 480px) {
+  header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .welcome {
+    font-size: 25px;
+  }
+
+  .container {
+    padding: 1.5rem;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  header {
+    max-width: 1022px;
+  }
+
+  .logo {
+    display: block;
+    max-width: 100%;
+  }
+
+  .welcome {
+    font-size: 35px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    max-width: 1022px;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 410px;
+  }
+
+  .welcome {
+    font-size: 60px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+
+  header {
+    max-width: 1920px;
+  }
+
+  .logo {
+    max-height: none;
+    width: 12rem;
+    height: auto;
+    padding-left: 1rem;
+  }
+
+  .welcome {
+    font-size: 85px;
+  }
+}
