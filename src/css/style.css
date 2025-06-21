@@ -17,7 +17,6 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   text-shadow: 0 0 1px transparent;
-  word-break: break-word;
 }
 
 /* Header */
@@ -29,6 +28,53 @@ header {
     padding-left: 1rem;
     padding: 1rem
 }
+
+/* NAVBAR */
+.navbar {
+  background-color: #00151f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-label {
+  font-size: 0.75rem;
+}
+
 
 
 /* Main */
@@ -121,13 +167,13 @@ button:hover {
 }
 
 /* Mensaje */
-.enviar {
+.send {
   margin-top: 1rem;
   font-weight: bold;
   text-align: center;
 }
 
-.limpiar {
+.clear {
   margin-top: 1rem;
   font-weight: bold;
   text-align: center;
@@ -143,6 +189,39 @@ footer {
   color: #fff;
   justify-content: center;
   text-align: center;
+}
+
+/* Social login */
+.social-login {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-login p {
+  color: #666;
+  font-size:1.2rem;
+  margin-bottom: 0.5rem;
+  margin: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 50%;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #ddd;
 }
 
 /* ========== MEDIA QUERIES ========== */
@@ -173,7 +252,6 @@ footer {
 @media (min-width: 768px) {
  
   .container {
-    padding: 1.5 rem;
     box-shadow: none;
     border-radius: 10px;
   }
@@ -198,6 +276,7 @@ footer {
 @media (min-width: 992px) {
   header {
     max-width: 1022px;
+    
   }
 
   .container {
@@ -234,7 +313,6 @@ footer {
   .welcome {
     font-size: 85px;
   }
-
 
 }
 

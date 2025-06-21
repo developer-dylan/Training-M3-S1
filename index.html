@@ -2,62 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Esta aplicación web, fue desarrollada con HTML, CSS y Javascript, calcula el Índice de Masa Corporal">
-    <meta name="keywords" content="IMC, developer-dylan, calculadoraimc">
-    <meta name="sitedomain" content="https://github.com/developer-dylan/SPA_IMC.git">
-    <meta name="organization" content="developer-dylan">
-    <meta name="author" content="Dylan Andrés Marín">
-    <meta name="designer" content="Dylan Andrés Marín">
-    <meta name="copyright" content="© 2025 developer-dylan. All rights reserved">
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="revisit-after" content="15days">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <title>Document</title>
+  <!-- Basic page setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO and info -->
+  <meta name="description" content="Esta aplicación web, desarrollada con HTML, CSS y JavaScript, permite validar el nombre y la edad del usuario de forma interactiva.">
+  <meta name="keywords" content="formulario, edad, validación, JavaScript, HTML, developer-dylan">
+  <meta name="sitedomain" content="https://github.com/developer-dylan/Training-M3-S1.git">
+  <meta name="organization" content="developer-dylan">
+  <meta name="author" content="Dylan Andrés Marín">
+  <meta name="designer" content="Dylan Andrés Marín">
+  <meta name="copyright" content="© 2025 developer-dylan. All rights reserved">
+
+  <!-- Design and icon -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="./src/icons/favicon.webp" type="image/x-icon">
+
+  <title>Hola Mundo!</title>
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="./src/img/logo-hola-mundo-horizontal.webp" alt="Esta imagen es el logo de la aplicación">
-    </header>
+  <!-- Header with logo and static menu icon -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img class="logo" src="./src/img/logo-hola-mundo-horizontal.webp" alt="Esta imagen es el logo de la aplicación">
+    </div>
+    <div class="menu-icon">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-label">Menú</span>
+    </div>
+  </header>
 
-    <main>
+  <main>
+    <div class="container">
+      <h2 class="welcome"> ¡Te damos la Bienvenida! </h2>
 
-        <div class="container">
+      <!-- Form: user inputs name and age -->
+      <div class="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="name" placeholder="Ingresa tu Nombre">
 
-            <h2 class="welcome">
-                ¡Te damos la Bienvenida!
-            </h2>
+        <label for="Age">Edad:</label>
+        <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
 
-            <div class="formulario">
-                
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="name" placeholder="Ingresa tu Nombre">
+        <!-- Buttons: show only "Enviar" first -->
+        <button onclick="send()">Enviar</button>
+        <button onclick="clear()" style="display: none;">Limpiar</button>
+      </div>
 
-                <label for="Age">Edad:</label>
-                <input type="number" step="1" id="age" placeholder="Ingresa tu Edad">
+      <!-- Message output after form -->
+      <div class="send" id="send"></div>
+      <div class="clear" id="clear"></div>
 
-                <button onclick="enviar()">Enviar</button>
-                <button onclick="limpiar()" style="display: none;">Limpiar</button>
-
-            </div>
-
-            <div class="enviar" id="enviar"></div>
-            <div class="limpiar" id="limpiar"> </div>
+      <!-- Social media icons -->
+      <div class="social-login">
+        <p>-----    O inicie sesión con    ------</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2025 developer-dylan. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 developer-dylan. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <script src="./src/js/main.js"></script>
+  <!-- Script for form logic -->
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>

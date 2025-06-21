@@ -1,57 +1,57 @@
-function enviar() {
-    const nombre = document.getElementById("name").value.trim();
+function send() {
+    const name = document.getElementById("name").value.trim();
     const age = document.getElementById("age").value.trim();
-    const resultado = document.getElementById("enviar");
-    const btnEnviar = document.querySelector("button[onclick='enviar()']");
-    const btnLimpiar = document.querySelector("button[onclick='limpiar()']");
+    const result = document.getElementById("send");
+    const btnSend = document.querySelector("button[onclick='send()']");
+    const btnClear = document.querySelector("button[onclick='clear()']");
 
-    resultado.textContent = "";
-    resultado.style.color = "red";
+    result.textContent = "";
+    result.style.color = "red";
 
     // Validación de campos vacíos
-    if (nombre === "" || age === "") {
-        resultado.textContent = "Por favor, completa todos los campos.";
+    if (name === "" || age === "") {
+        result.textContent = "Por favor, completa todos los campos.";
         return;
     }
 
-    const edad = Number(age);
+
 
     // Validación no numérica
-    if (isNaN(edad) || age.match(/[a-zA-Z]/)) {
+    if (isNaN(age) || age.match(/[a-zA-Z]/)) {
         console.error("Error: Por favor, ingresa una edad válida en números.");
-        resultado.textContent = "Error: Por favor, ingresa una edad válida en números.";
+        result.textContent = "Error: Por favor, ingresa una edad válida en números.";
         return;
     }
 
     // Validación de rango
-    if (edad < 0 || edad > 120) {
-        resultado.textContent = "La edad debe estar entre 0 y 120 años.";
+    if (age < 0 || age > 120) {
+        result.textContent = "La edad debe estar entre 0 y 120 años.";
         return;
     }
 
     // Mensaje según edad
-    if (edad < 18) {
-        resultado.textContent = `Hola ${nombre}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
+    if (age < 18) {
+        result.textContent = `Hola ${name}, eres menor de edad. ¡Sigue aprendiendo y disfrutando del código!`;
     } else {
-        resultado.textContent = `Hola ${nombre}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
+        result.textContent = `Hola ${name}, eres mayor de edad. ¡Prepárate para grandes oportunidades en el mundo de la programación!`;
     }
 
-    resultado.style.color = "green";
+    result.style.color = "green";
 
     // Cambiar botones
-    btnEnviar.style.display = "none";
-    btnLimpiar.style.display = "inline-block";
+    btnSend.style.display = "none";
+    btnClear.style.display = "inline-block";
 }
 
-function limpiar() {
+function clear() {
     // Limpiar campos
     document.getElementById("name").value = "";
     document.getElementById("age").value = "";
-    document.getElementById("enviar").textContent = "";
+    document.getElementById("send").textContent = "";
 
     // Restaurar visibilidad de botones
-    const btnEnviar = document.querySelector("button[onclick='enviar()']");
-    const btnLimpiar = document.querySelector("button[onclick='limpiar()']");
-    btnEnviar.style.display = "inline-block";
-    btnLimpiar.style.display = "none";
+    const btnSend = document.querySelector("button[onclick='send()']");
+    const btnClear = document.querySelector("button[onclick='clear()']");
+    btnSend.style.display = "inline-block";
+    btnClear.style.display = "none";
 }
