@@ -1,11 +1,11 @@
-/* Reset general */
+/* Reset all margins, paddings and use border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fuente y fondo general */
+/* General body styles */
 body {
   color: #373737;
   min-height: 100vh;
@@ -19,17 +19,14 @@ body {
   text-shadow: 0 0 1px transparent;
 }
 
-/* Header */
+/* Header styles */
 header {
-    background-color: #00151f;
-    position: relative;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding: 1rem
+  background-color: #00151f;
+  width: 100%;
+  padding: 1rem; /* all sides */
 }
 
-/* NAVBAR */
+/* Top navigation bar */
 .navbar {
   background-color: #00151f;
   color: white;
@@ -75,9 +72,7 @@ header {
   font-size: 0.75rem;
 }
 
-
-
-/* Main */
+/* Main content area */
 main {
   flex: 1;
   padding: 2rem;
@@ -92,7 +87,7 @@ main {
   height: auto;
 }
 
-/* Formulario */
+/* Form container */
 .container {
   background-color: white;
   padding: 2rem;
@@ -100,6 +95,7 @@ main {
   max-width: 550px;
 }
 
+/* Welcome title */
 .welcome {
   margin: 0 0 1rem;
   font-family: "Raleway", sans-serif;
@@ -110,12 +106,12 @@ main {
   text-align: center !important;
 }
 
-.formulario {
+/* Form style */
+.form-login {
   padding-top: 1rem;
   display: block;
   width: 100%;
   font-size: 1rem;
-  font-weight: 600;
   font-weight: bold;
   color: #373737;
 }
@@ -125,21 +121,21 @@ label {
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #373737;
-  padding-top: 1rem ;
+  padding-top: 1rem;
 }
 
 input[type="text"],
 input[type="number"] {
-    transition: border-color 200ms ease, outline 200ms ease;
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #d9d9d9;
-    border-radius: 0;
-    background-color: #fff;
-    color: #373737;
-    font-size: 1rem;
-    line-height: normal;
+  transition: border-color 200ms ease, outline 200ms ease;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #d9d9d9;
+  border-radius: 0;
+  background-color: #fff;
+  color: #373737;
+  font-size: 1rem;
+  line-height: normal;
 }
 
 input[type="text"]:focus,
@@ -149,7 +145,7 @@ input[type="number"]:focus {
   box-shadow: 0 0 5px #52abe9;
 }
 
-/* Botón */
+/* Button style */
 button {
   margin-top: 1.5rem;
   width: 100%;
@@ -166,20 +162,14 @@ button:hover {
   background-color: #2563eb;
 }
 
-/* Mensaje */
-.send {
+/* Message style */
+.send, .clean {
   margin-top: 1rem;
   font-weight: bold;
   text-align: center;
 }
 
-.clear {
-  margin-top: 1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Footer */
+/* Footer styles */
 footer {
   margin-top: auto;
   padding-top: 2rem;
@@ -191,7 +181,7 @@ footer {
   text-align: center;
 }
 
-/* Social login */
+/* Social media login icons */
 .social-login {
   text-align: center;
   margin-top: 2rem;
@@ -199,7 +189,7 @@ footer {
 
 .social-login p {
   color: #666;
-  font-size:1.2rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   margin: 1rem;
 }
@@ -224,11 +214,10 @@ footer {
   background-color: #ddd;
 }
 
-/* ========== MEDIA QUERIES ========== */
+/* === MEDIA QUERIES === */
 
-/* 1. Celulares pequeños (hasta 480px) */
+/* Small phones */
 @media (max-width: 480px) {
-
   header {
     position: relative;
     width: 100%;
@@ -245,19 +234,17 @@ footer {
     box-shadow: none;
     border-radius: 10px;
   }
-  
 }
 
-/* 2. Tabletas (481px – 768px) */
-@media (min-width: 768px) {
- 
+/* Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
   .container {
     box-shadow: none;
     border-radius: 10px;
   }
 
   header {
-   max-width: 1022px;
+    max-width: 1022px;
   }
 
   .logo {
@@ -266,17 +253,14 @@ footer {
   }
 
   .welcome {
-    font-size: 85px;
+    font-size: 35px;
   }
-
-  
 }
 
-/* 3. Laptops (769px – 1024px) */
-@media (min-width: 992px) {
+/* Laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
   header {
     max-width: 1022px;
-    
   }
 
   .container {
@@ -289,11 +273,11 @@ footer {
   }
 
   .welcome {
-    font-size: 85px;
+    font-size: 60px;
   }
 }
 
-/* 4. Escritorios grandes (más de 1024px) */
+/* Large screens */
 @media (min-width: 1024px) {
   .container {
     max-width: 700px;
@@ -309,10 +293,8 @@ footer {
     height: auto;
     padding-left: 1rem;
   }
-  
+
   .welcome {
     font-size: 85px;
   }
-
 }
-

@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="shortcut icon" href="./src/icons/favicon.webp" type="image/x-icon">
 
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
   <title>Hola Mundo!</title>
 </head>
 
@@ -42,7 +46,7 @@
       <h2 class="welcome"> ¡Te damos la Bienvenida! </h2>
 
       <!-- Form: user inputs name and age -->
-      <div class="formulario">
+      <div class="form-login">
         <label for="nombre">Nombre:</label>
         <input type="text" id="name" placeholder="Ingresa tu Nombre">
 
@@ -51,12 +55,12 @@
 
         <!-- Buttons: show only "Enviar" first -->
         <button onclick="send()">Enviar</button>
-        <button onclick="clear()" style="display: none;">Limpiar</button>
+        <button onclick="clean()" style="display: none;">Limpiar</button>
       </div>
 
       <!-- Message output after form -->
       <div class="send" id="send"></div>
-      <div class="clear" id="clear"></div>
+      <div class="clean" id="clean"></div>
 
       <!-- Social media icons -->
       <div class="social-login">
